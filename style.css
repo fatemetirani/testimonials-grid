@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+.grid-content {
+  display: grid;
+  grid-template-columns: 255px 255px 255px 255px;
+  grid-template-rows: 282px 266px;
+  row-gap: 24px;
+  column-gap: 30px;
+  color: #fff;
+}
+.violet {
+  background-color: #733fc8;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 356px 0;
+}
+.violet img{
+  border: 2px solid #a775f1;
+
+}
+.gray {
+  background-color: #48556a;
+}
+.withe {
+  background-color: #fff;
+  color: #48556a;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+.black {
+  background-color: #fff;
+  color: #48556a;
+}
+.last {
+  background-color: #19202d;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+.last img{
+  border: 2px solid #a775f1;
+}
+.card {
+  border-radius: 8px;
+  padding: 26px 32px 32px 32px;
+  box-shadow: 10px 10px 20px #cfcfcf;
+}
+.prof {
+  display: flex;
+}
+img {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+.tittle {
+  padding-left: 17px;
+}
+h3 {
+  font-family: "Barlow Semi Condensed";
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+}
+span {
+  font-size: 11px;
+  font-family: "Barlow Semi Condensed";
+  opacity: 50%;
+
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(css/fonts/BarlowSemiCondensed-Medium.ttf);
+}
+@font-face {
+  font-family: "semi";
+  src: url(css/fonts/BarlowSemiCondensed-SemiBold.ttf);
+}
+.top {
+  margin-top: 18px;
+  font-size: 20px;
+  font-family: "semi";
+}
+.bottom {
+  margin-top: 16px;
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed";
+  opacity: 70%;
+  line-height: 18px;
+
+}
+@media screen and (max-width: 900px) {
+  .grid-content {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+  height: 100%;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 282px 282px 282px;
+  }
+  .withe {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+  }
+}
+@media screen and (max-width: 650px) {
+  .grid-content {
+    width: 327px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .violet {
+    order: 1;
+  }
+  .gray {
+    order: 2;
+  }
+  .withe {
+    order: 5;
+  }
+  .black {
+    order: 3;
+  }
+  .last {
+    order: 4;
+  }
+}
